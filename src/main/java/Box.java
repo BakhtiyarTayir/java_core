@@ -33,11 +33,23 @@ public class Box {
 class BoxWeight extends Box {
     double weight;
 
-    public BoxWeight(double w, double h, double d, double m) {
-        width = w;
-        height = h;
-        depth = d;
-        weight = m;
+    public BoxWeight(Box ob, double weight) {
+        super(ob);
+        this.weight = weight;
+    }
+
+    public BoxWeight(double w, double h, double d, double weight) {
+        super(w, h, d);
+        this.weight = weight;
+    }
+
+    public BoxWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public BoxWeight(double len, double weight) {
+        super(len);
+        this.weight = weight;
     }
 }
 
